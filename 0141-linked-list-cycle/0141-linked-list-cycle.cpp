@@ -6,26 +6,24 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        map<ListNode *, int> mp;
+        ListNode *turtle, *hare;
+        if (head == NULL || head->next == NULL)
+            return 0;
         
-        ListNode *ptr = head;
-        bool flag = 0;
-
-        while (ptr != NULL)
+        turtle = head;
+        hare = head->next;
+        
+        while (turtle != hare)
         {
-            mp[ptr->next]++;
-            if (mp[ptr->next] > 1)
-            {
-                flag = 1;
-                break;
-            }
-            ptr = ptr->next;
+            if (turtle == NULL || hare == NULL || hare->next == NULL)
+                return 0;
+            turtle = turtle->next;
+            hare = hare->next->next;
         }
         
-        return flag;
+        return 1;
     }
 };
