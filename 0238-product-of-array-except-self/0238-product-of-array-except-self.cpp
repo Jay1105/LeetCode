@@ -5,21 +5,24 @@ public:
         vector<int> res(n);
         
         int ans = 1;
-        for (int i = 0; i < n; i++)
-            ans *= nums[i];
+        int flag = 0;
         for (int i = 0; i < n; i++)
         {
             if (nums[i] == 0)
-            {
-                int temp = 1;
-                for (int j = 0; j < n; j++)
-                {
-                    if (j == i)
-                        continue;
-                    temp *= nums[j];
-                }
-                res[i] = temp;
-            }
+                flag++;
+            else
+                ans *= nums[i];
+        }
+        
+        if (flag > 1)
+            ans = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            if (nums[i] == 0)
+                res[i] = ans;
+            else if (flag > 0)
+                res[i] = 0;
             else
                 res[i] = ans / nums[i];
         }
