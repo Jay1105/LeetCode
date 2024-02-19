@@ -51,7 +51,6 @@ public:
                 num -= tp;
             }
         }
-
         return ans;
     }
 };
