@@ -39,7 +39,6 @@ public:
             for (int j = 0; j < v[i].size(); j++)
                 ans += v[i][j];
         }
-        
         return ans;
     }
 };
