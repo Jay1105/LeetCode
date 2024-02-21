@@ -2,7 +2,6 @@ class Solution {
 public:
     string convert(string s, int numRows) {
         vector<vector<char> > v(numRows);
-        
         int k = 0;
         bool flag = true;
         
@@ -39,6 +38,7 @@ public:
             for (int j = 0; j < v[i].size(); j++)
                 ans += v[i][j];
         }
+        
         return ans;
     }
 };
