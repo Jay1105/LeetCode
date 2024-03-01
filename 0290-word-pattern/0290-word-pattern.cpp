@@ -1,8 +1,10 @@
 class Solution {
 public:
-    bool wordPattern(string pattern, string s) {
+    bool wordPattern(string pattern, string s)
+    {
         vector<string> arr;
         string temp = "";
+
         for (int i = 0; i < s.size(); i++)
         {
             if (s[i] == ' ')
@@ -37,6 +39,7 @@ public:
             else if (mp[pattern[i]] != tt)
                 return false;
         }
+
         return true;
     }
 };
