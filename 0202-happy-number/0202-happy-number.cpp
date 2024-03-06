@@ -2,7 +2,6 @@ class Solution {
 public:
     bool isHappy(int n) {
         map<long long, int> mp;
-        
         long long num = n;
         bool flag = false;
         
@@ -22,6 +21,7 @@ public:
                 flag = true;
             if (mp[num])
                 break;
+    
             mp[num] = 1;
         } while (num != 1);
         
