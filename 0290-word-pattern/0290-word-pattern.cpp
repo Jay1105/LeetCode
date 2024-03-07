@@ -26,7 +26,6 @@ public:
         for (int i = 0; i < pattern.size(); i++)
         {
             string tt = arr[i];
-
             if (mp[pattern[i]] == "")
             {
                 for (it = mp.begin(); it != mp.end(); it++)
@@ -39,7 +38,6 @@ public:
             else if (mp[pattern[i]] != tt)
                 return false;
         }
-
         return true;
     }
 };
