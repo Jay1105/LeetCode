@@ -38,6 +38,7 @@ public:
             else if (mp[pattern[i]] != tt)
                 return false;
         }
+
         return true;
     }
 };
