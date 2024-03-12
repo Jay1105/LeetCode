@@ -2,7 +2,6 @@ class Solution {
 public:
     int findMinArrowShots(vector<vector<int>>& points) {
         int n = points.size();
-        
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
         
         for (int i = 0; i < n; i++)
