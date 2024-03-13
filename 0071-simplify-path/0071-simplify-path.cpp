@@ -32,10 +32,11 @@ public:
         }
         
         string ans = "/";
+        string temp;
         
         while (!st.empty())
         {
-            string temp = st.top();
+            temp = st.top();
             temp = "/" + temp;
             st.pop();
             ans = temp + ans;
