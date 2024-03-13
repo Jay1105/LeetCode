@@ -5,7 +5,6 @@ public:
         path = path + '/';
         stack<string> st;
         int n = path.size();
-        
         int cnt = 0;
 
         for (int i = 0; i < n; i++)
