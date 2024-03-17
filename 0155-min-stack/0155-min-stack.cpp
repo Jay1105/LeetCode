@@ -4,7 +4,7 @@ public:
 
     MinStack() {
     }
-    
+
     void push(int val) {
         if (st.empty())
             st.push(make_pair(val, val));
