@@ -61,7 +61,7 @@ public:
                 list2 = list2->next;
             }
             ptr3->next = NULL;
-        
+
             return start;
         }
     }
