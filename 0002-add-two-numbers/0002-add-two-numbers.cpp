@@ -46,8 +46,8 @@ public:
 
             lastDigit = temp % 10;
             ptr->next = new ListNode(lastDigit);
+
             temp /= 10;
-            
             if (temp != 0)
                 carry = 1;
             
@@ -63,8 +63,8 @@ public:
 
             lastDigit = temp % 10;
             ptr->next = new ListNode(lastDigit);
+
             temp /= 10;
-            
             if (temp != 0)
                 carry = 1;
 
