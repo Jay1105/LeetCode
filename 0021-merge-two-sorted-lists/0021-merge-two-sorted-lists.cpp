@@ -11,56 +11,54 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode *ptr1, *ptr2;
-        ptr1 = list1, ptr2 = list2;
         ListNode *start = NULL;
         
-        if (ptr1 == NULL && ptr2 == NULL)
+        if (list1 == NULL && list2 == NULL)
             return start;
-        else if (ptr1 == NULL)
+        else if (list1 == NULL)
             return list2;
-        else if (ptr2 == NULL)
+        else if (list2 == NULL)
             return list1;
         else
         {
-            if (ptr1->val <= ptr2->val)
+            if (list1->val <= list2->val)
             {
-                start = ptr1;
-                ptr1 = ptr1->next;
+                start = list1;
+                list1 = list1->next;
             }
             else
             {
-                start = ptr2;
-                ptr2 = ptr2->next;
+                start = list2;
+                list2 = list2->next;
             }
         
 
             ListNode *ptr3 = start;
-            while (ptr1 != NULL && ptr2 != NULL)
+            while (list1 != NULL && list2 != NULL)
             {
-                if (ptr1->val <= ptr2->val)
+                if (list1->val <= list2->val)
                 {
-                    ptr3->next = ptr1;
-                    ptr1 = ptr1->next;
+                    ptr3->next = list1;
+                    list1 = list1->next;
                 }
                 else
                 {
-                    ptr3->next = ptr2;
-                    ptr2 = ptr2->next;
+                    ptr3->next = list2;
+                    list2 = list2->next;
                 }
                 ptr3 = ptr3->next;
             }
-            while (ptr1 != NULL)
+            while (list1 != NULL)
             {
-                ptr3->next = ptr1;
+                ptr3->next = list1;
                 ptr3 = ptr3->next;
-                ptr1 = ptr1->next;
+                list1 = list1->next;
             }
-            while (ptr2 != NULL)
+            while (list2 != NULL)
             {
-                ptr3->next = ptr2;
+                ptr3->next = list2;
                 ptr3 = ptr3->next;
-                ptr2 = ptr2->next;
+                list2 = list2->next;
             }
             ptr3->next = NULL;
         
