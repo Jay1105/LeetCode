@@ -19,9 +19,7 @@ public:
             return false;
         
         if (p->val == q->val)
-        {
             return isMirror(p->left, q->right) && isMirror(p->right, q->left);
-        }
         
         return false;
     }
