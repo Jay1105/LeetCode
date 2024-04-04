@@ -34,6 +34,7 @@ public:
         
         int index = 0;
         int n = inorder.size();
+
         TreeNode* res = constructTree(preorder, index, 0, n - 1);
         
         return res;
