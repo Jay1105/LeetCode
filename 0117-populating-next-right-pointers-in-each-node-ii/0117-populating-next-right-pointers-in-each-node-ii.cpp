@@ -46,7 +46,6 @@ public:
             }
             temp->next = NULL;
         }
-        
         return root;
     }
 };
