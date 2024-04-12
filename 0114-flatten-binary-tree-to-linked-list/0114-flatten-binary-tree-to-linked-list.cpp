@@ -16,7 +16,6 @@ public:
     {
         if (root == NULL)
             return;
-        
         flatten(root->right);
         flatten(root->left);
         
