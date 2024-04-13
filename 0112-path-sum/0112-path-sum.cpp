@@ -11,11 +11,13 @@
  */
 class Solution {
 public:
-    bool hasPathSum(TreeNode* root, int targetSum) {
+    bool hasPathSum(TreeNode* root, int targetSum) 
+    {
         return helper(root, 0, targetSum);
     }
     
-    bool helper(TreeNode* root, int currSum, int targetSum) {
+    bool helper(TreeNode* root, int currSum, int targetSum) 
+    {
         if (root == NULL) 
             return false;
         
