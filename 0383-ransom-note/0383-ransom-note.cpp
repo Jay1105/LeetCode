@@ -9,6 +9,7 @@ public:
             if (--mp[ransomNote[i]] < 0)
                 return false;
         }
+
         return true;
     }
 };
