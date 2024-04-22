@@ -22,7 +22,6 @@ public:
     {
         if (root == NULL)
             return root;
-
         queue<Node*> q;
         q.push(root);
 
@@ -38,7 +37,6 @@ public:
 
                 if (n)
                     temp->next = q.front();
-                
                 if (temp->left != NULL)
                     q.push(temp->left);
                 if (temp->right != NULL)
