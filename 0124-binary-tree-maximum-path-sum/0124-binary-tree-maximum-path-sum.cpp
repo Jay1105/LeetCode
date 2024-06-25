@@ -30,7 +30,6 @@ public:
 
     long maxPathSum(TreeNode* root) {
         long tp = helper(root);
-        
         return mx;
     }
 };
