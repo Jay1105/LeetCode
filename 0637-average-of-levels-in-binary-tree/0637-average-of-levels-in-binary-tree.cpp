@@ -47,7 +47,6 @@ public:
                 sum = 0, cnt = 0;
             }
         }
-        
         return ans;
     }
 };
