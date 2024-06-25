@@ -60,7 +60,6 @@ public:
                 tp.clear();
             }
         }
-        
         return ans;
     }
 };
