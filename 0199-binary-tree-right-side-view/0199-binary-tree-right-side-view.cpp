@@ -42,7 +42,6 @@ public:
                 ans.push_back(tp);
             }
         }
-        
         return ans;
     }
 };
