@@ -25,7 +25,6 @@ public:
             int left = getMinimumDifference(root->left);
             ans = min(ans, left);
         }
-        
         temp = root;
         if (root->right) {
             temp = temp->right;
