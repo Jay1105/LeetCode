@@ -14,11 +14,9 @@ public:
     bool helper (TreeNode* root, long long l, long long r) {
         if (root == NULL)
             return true;
-        
         if (root->val > l && root->val < r) {
             return helper(root->left, l, root->val) && helper(root->right, root->val, r);
         }
-        
         return false;
     }
     
@@ -28,7 +26,6 @@ public:
         
         if (helper(root, l, r))
             return true;
-        
         return false;
     }
 };
