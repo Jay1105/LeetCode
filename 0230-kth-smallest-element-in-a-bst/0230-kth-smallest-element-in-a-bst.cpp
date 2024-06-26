@@ -23,7 +23,6 @@ public:
 
     int kthSmallest(TreeNode* root, int k) {
         helper(root);
-        
         return smallArray[--k];
     }
 };
