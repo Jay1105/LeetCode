@@ -25,7 +25,6 @@ public:
                 }
             }
         }
-        
         return islands;
     }
 };
