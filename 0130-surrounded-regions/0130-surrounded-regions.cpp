@@ -23,7 +23,6 @@ public:
             if (board[i][m - 1] == 'O')
                 dfs(i, m - 1, board);
         }
-
         for (int i = 0; i < m; i++) {
             if (board[0][i] == 'O')
                 dfs(0, i, board);
