@@ -24,13 +24,16 @@ public:
     void dfs(Node *curr, Node *node, vector<Node *> &vis) {
         vis[node->val] = node;
         
-        for (auto ele: curr->neighbors) {
-            if (vis[ele->val] == NULL) {
+        for (auto ele: curr->neighbors) 
+        {
+            if (vis[ele->val] == NULL) 
+            {
                 Node *newnode = new Node(ele->val);
                 (node->neighbors).push_back(newnode);
                 dfs(ele, newnode, vis);
             }
-            else {
+            else 
+            {
                 (node->neighbors).push_back(vis[ele->val]);
             }
         }
@@ -45,13 +48,16 @@ public:
         Node *copy = new Node(node->val);
         vis[node->val] = copy;
         
-        for (auto curr: node->neighbors) {
-            if (vis[curr->val] == NULL) {
+        for (auto curr: node->neighbors) 
+        {
+            if (vis[curr->val] == NULL) 
+            {
                 Node *newnode = new Node(curr->val);
                 (copy->neighbors).push_back(newnode);
                 dfs(curr, newnode, vis);
             }
-            else {
+            else 
+            {
                 (copy->neighbors).push_back(vis[curr->val]);
             }
         }
