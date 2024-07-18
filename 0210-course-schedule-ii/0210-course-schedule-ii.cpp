@@ -5,7 +5,6 @@ public:
     {
         vis[i] = 1;
         dfsvis[i] = 1;
-        
         for (auto it: graph[i])
         {
             if (dfsvis[it] == 1)
@@ -13,7 +12,6 @@ public:
             else if (dfsHelp(it, vis, dfsvis, graph))
                 return true;
         }
-        
         dfsvis[i] = false;
         return false;
     }
@@ -21,13 +19,11 @@ public:
     void dfs(int i, vector<int> &vis, stack<int> &st, vector<int> graph[])
     {
         vis[i] = 1;
-        
         for (auto it: graph[i])
         {
             if (vis[it] == 0)
                 dfs(it, vis, st, graph);
         }
-        
         st.push(i);
     }
         
