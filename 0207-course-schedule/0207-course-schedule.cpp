@@ -5,24 +5,17 @@ public:
     {
         vis[i] = 1;
         dfsvis[i] = 1;
-
         for (auto it : adj[i])
         {
             if (vis[it] == 0)
             {
                 if (dfsHelp(it, vis, dfsvis, adj))
-                {
                     return true;
-                }
             }
             else if (dfsvis[it] == 1)
-            {
                 return true;
-            }
         }
-
         dfsvis[i] = 0;
-
         return false;
     }
     
@@ -46,7 +39,6 @@ public:
                     return false;
             }
         }
-        
         return true;
     }
 };
