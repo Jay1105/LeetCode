@@ -76,7 +76,6 @@ public:
                 st.pop();
             }
         }
-        
         return ans;
     }
 };
