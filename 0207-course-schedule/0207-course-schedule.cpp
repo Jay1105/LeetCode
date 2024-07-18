@@ -28,26 +28,11 @@ public:
     
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
         vector<int> graph[numCourses];
-        map<string, int> mp;
         
         for (int i = 0; i < prerequisites.size(); i++)
         {
             vector<int> tp = prerequisites[i];
             graph[tp[0]].push_back(tp[1]);
-            
-            string temp = to_string(tp[0]) + "-" + to_string(tp[1]);
-            mp[temp] = 1;
-        }
-                
-        for (int i = 0; i < numCourses; i++)
-        {
-            for (int j = 0; j < graph[i].size(); j++)
-            {
-                string temp = to_string(graph[i][j]) + "-" + to_string(i);
-                
-                if (mp[temp])
-                    return false;
-            }
         }
         
         vector<int> vis(numCourses, 0);
