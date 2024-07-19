@@ -6,7 +6,7 @@ public:
             return -1.0;
         if (src == dest)
             return 1.0;
-        
+    
         vis.insert(src);
         for (auto neighbour: graph[src])
         {
@@ -32,7 +32,7 @@ public:
             graph[a][b] = values[i];
             graph[b][a] = 1.0 / values[i];
         }
-        
+    
         vector<double> ans;
         for (auto q: queries)
         {
@@ -42,7 +42,7 @@ public:
             unordered_set<string> vis;
             ans.push_back(dfsHelp(a, b, vis, graph));
         }
-        
+
         return ans;
     }
 };
