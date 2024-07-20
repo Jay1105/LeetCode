@@ -18,7 +18,6 @@ public:
         queue<int> q;
         vector<int> dist(n*n + 1, -1);
         dist[1] = 0;
-        
         q.push(1);
         
         while (!q.empty())
