@@ -44,7 +44,7 @@ public:
                     ans = cnt;
                 }
                 sum = 0;
-                
+        
                 if (!q.empty())
                     q.push(NULL);
             }
